@@ -1,0 +1,120 @@
+.first-screen {
+  background: $first-screen-gradient;
+  position: relative;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__list {
+    display: flex;
+  }
+  &__list-item {
+    width: 119px;
+    height: 123px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background-color: $controls-first;
+    position: relative;
+    &--active {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-45deg);
+        border: 10px solid $controls-first;
+        border-top-color: transparent;
+        border-right-color: transparent;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $controls-sec;
+      &:after {
+        border-left-color: $controls-sec;
+        border-bottom-color: $controls-sec;
+      }
+    }
+    &:nth-child(3) {
+      background-color: $controls-third;
+      &:after {
+        border-left-color: $controls-third;
+        border-bottom-color: $controls-third;
+      }
+    }
+  }
+  &__control {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: initial;
+    }
+  }
+  &__phone {
+    padding: 0 50px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    img {
+      $size: 56px;
+      width: $size;
+      height: $size;
+      margin-right: 9px;
+    }
+  }
+  &__earth-text {
+    font-size: $btn-size;
+    text-transform: uppercase;
+    span {
+      display: block;
+    }
+  }
+  &__title {
+    font-size: $first-title;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: $medium-font;
+    margin-bottom: 30px;
+  }
+  &__btn {
+    display: flex;
+    height: 46px;
+    min-width: 171px;
+    max-width: fit-content;
+    background-color: $shop-link-bg;
+  }
+  &__icon-wrapper {
+      background-color: $cart-bg;
+      width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+          width: initial;
+      }
+  }
+  &__label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $btn-size;
+  }
+}

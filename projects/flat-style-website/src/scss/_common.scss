@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    min-height: 100vh;
+    font-size: 100%;
+}
+body {
+    background-color: $white;
+    font-family: $common-font;
+    font-size: $small-font;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    color: inherit;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+    padding: $padding;
+}
