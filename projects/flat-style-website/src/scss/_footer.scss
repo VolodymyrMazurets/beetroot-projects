@@ -1,0 +1,8 @@
+.footer {
+  padding: 39px 0 37px;
+  @extend %center-row;
+  border: 1px solid $light-grey;
+  &__text {
+    @include text($btn-size, 400, $dark-grey);
+  }
+}

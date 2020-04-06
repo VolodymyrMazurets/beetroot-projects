@@ -1,6 +1,9 @@
 @import "vars";
 @import "mixins";
+@import "inheritance";
 @import "common";
 
 @import "./navigation";
 @import "./first-screen";
+@import "./about-minimal";
+@import "./footer";

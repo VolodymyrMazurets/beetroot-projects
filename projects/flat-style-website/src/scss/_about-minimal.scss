@@ -1,0 +1,56 @@
+.about-minimal {
+  padding: 47px 0 130px;
+  @extend %center-col;
+  &__title {
+    @include text($sec-title, 300, $dark-grey);
+    margin-bottom: 30px;
+  }
+  &__text {
+    @include text($small-font, 400, $light-grey);
+    margin-bottom: 45px;
+    max-width: 80%;
+    text-align: center;
+  }
+  &__wrapper {
+    background: url("../img/circle.png") center no-repeat;
+    background-size: cover;
+    @extend %center-col;
+    padding: 62px 116px 85px 116px;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+    }
+    &:after {
+      background: url("../img/line-shirt.png") center no-repeat;
+      top: 4px;
+      width: 600px;
+      height: 600px;
+      z-index: 0;
+    }
+    &:before {
+      background: url("../img/line-long.png") center no-repeat;
+      top: 4px;
+      width: 500px;
+      height: 500px;
+      z-index: 0;
+    }
+  }
+  &__img-wrapper {
+    width: 73px;
+    height: 104px;
+    margin-bottom: 40px;
+    z-index: 1;
+  }
+  &__subtitle {
+    @include text($huge-title, 400, $white);
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  &__small-title {
+    @include text($sec-title, 400, $white);
+    z-index: 1;
+  }
+}
