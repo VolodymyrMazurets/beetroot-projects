@@ -2,8 +2,11 @@
 @import "mixins";
 @import "inheritance";
 @import "common";
-
+@import "our-btn";
+// Sections
 @import "./navigation";
 @import "./first-screen";
 @import "./about-minimal";
+@import "./shoecase";
+@import "./discount";
 @import "./footer";

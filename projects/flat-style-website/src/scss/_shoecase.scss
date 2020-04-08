@@ -1,0 +1,81 @@
+$bg-colors: (
+  first: $shop-first,
+  second: $shop-second,
+  third: $shop-third,
+  fourth: $shop-fourth,
+  sixth: $shop-sixth,
+);
+
+@function get-color($key) {
+  @return map-get($bg-colors, $key);
+}
+
+.shoecase {
+  background: $first-screen-gradient;
+  padding-bottom: 77px;
+  &__nav {
+    height: 170px;
+  }
+  &__list {
+    @include flex-row(stretch, stretch);
+    width: 100%;
+    height: 100%;
+  }
+  &__list-item {
+    flex: 1;
+    @include flex-row(stretch, stretch);
+    background-color: $shop-first;
+    &:nth-child(2) {
+      background-color: $shop-second;
+    }
+    &:nth-child(3) {
+      background-color: $shop-third;
+    }
+    &:nth-child(4) {
+      background-color: $shop-fourth;
+    }
+    &:nth-child(5) {
+      background-color: $shop-fifth;
+    }
+    &:nth-child(6) {
+      background-color: $shop-sixth;
+    }
+  }
+  &__link {
+    flex: 1;
+    @extend %center-row;
+    img {
+      @include size(82px);
+    }
+  }
+  &__content {
+    @include flex-row;
+  }
+  &__img-wrapper {
+    flex: 1 1 60%;
+    position: relative;
+    padding-top: 35.4%;
+    img {
+        position: absolute;
+        @include position;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+  }
+  &__info {
+    padding-top: 58px;
+    flex: 1 1 40%;
+  }
+  &__title {
+    font-size: $first-title;
+    margin-bottom: 11px;
+    color: $white;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: $medium-font;
+    color: $white;
+    margin-bottom: 29px;
+  }
+}

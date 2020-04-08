@@ -1,0 +1,24 @@
+.our-btn {
+  display: flex;
+  height: 46px;
+  min-width: 171px;
+  max-width: fit-content;
+  background-color: $shop-link-bg;
+  &__icon-wrapper {
+    background-color: $cart-bg;
+    width: 56px;
+    @extend %center-row;
+    &--light-color {
+      background-color: $cart-bg-light;
+    }
+    img {
+      width: initial;
+    }
+  }
+  &__label {
+    flex: 1;
+    @extend %center-row;
+    font-size: $btn-size;
+    color: $white;
+  }
+}

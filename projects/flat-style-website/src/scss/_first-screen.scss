@@ -1,10 +1,8 @@
 .first-screen {
   background: $first-screen-gradient;
   position: relative;
-  padding: 24px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 50px 0;
+  @include flex-row(center, center);
   &__nav {
     position: absolute;
     top: 0;
@@ -56,7 +54,47 @@
     }
   }
   &__phone {
-    padding: 0 50px;
+    margin-right: 150px;
+    min-width: 256px;
+    position: relative;
+    padding-top: 35.4%;
+    img {
+      position: absolute;
+      @include position;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 10;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    &:after {
+      @include size(335px, true);
+      background-color: #13b9ab;
+      z-index: 3;
+    }
+    &:before {
+      @include size(395px, true);
+      background-color: #13b9ab;
+      opacity: 0.2;
+      z-index: 2;
+    }
+  }
+  &__phone-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    @include size(455px, true);
+    background-color: #13b9ab;
+    opacity: 0.2;
+    z-index: 1;
   }
   &__info {
     @include flex-col(center, flex-start);
@@ -87,25 +125,5 @@
   &__text {
     font-size: $medium-font;
     margin-bottom: 30px;
-  }
-  &__btn {
-    display: flex;
-    height: 46px;
-    min-width: 171px;
-    max-width: fit-content;
-    background-color: $shop-link-bg;
-  }
-  &__icon-wrapper {
-      background-color: $cart-bg;
-      width: 56px;
-      @extend %center-row;
-      img {
-          width: initial;
-      }
-  }
-  &__label {
-    flex: 1;
-    @extend %center-row;
-    font-size: $btn-size;
   }
 }

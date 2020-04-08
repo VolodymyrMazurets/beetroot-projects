@@ -1,0 +1,22 @@
+.discount {
+  @include flex-row(stretch, stretch);
+  &__col {
+    padding: 80px 0 104px;
+    flex: 1 1 60%;
+    @include flex-row(center, center);
+    &:last-child {
+      flex-basis: 40%;
+      background-color: $main-color;
+      img {
+          width: 50%;
+      }
+    }
+  }
+  &__title {
+    @include text($imortal-size, 400, $main-color);
+    span {
+      display: block;
+      font-size: $huge-title;
+    }
+  }
+}
