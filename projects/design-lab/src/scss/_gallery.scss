@@ -1,0 +1,49 @@
+$styles: gallery;
+.#{$styles} {
+  &__card {
+    padding: 169px 45px 40px;
+    background-image: url("../img/grid-img-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+  }
+  &__title {
+    @include text($card-size, 700, $white);
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__card-wrapper {
+    padding: 0 5px 5px 0;
+    &:nth-child(2) {
+      padding: 0 5px 5px;
+      .#{$styles}__card {
+        background-image: url("../img/grid-img-2.jpg");
+      }
+    }
+    &:nth-child(3) {
+      padding: 0 0 5px 5px;
+      .#{$styles}__card {
+        background-image: url("../img/grid-img-3.jpg");
+      }
+    }
+    &:nth-child(4) {
+      padding: 5px 5px 0 0;
+      .#{$styles}__card {
+        background-image: url("../img/grid-img-4.jpg");
+      }
+    }
+    &:nth-child(5) {
+      padding: 5px 5px 0;
+      .#{$styles}__card {
+        background-image: url("../img/grid-img-5.jpg");
+      }
+    }
+    &:nth-child(6) {
+      padding: 5px 0 0 5px;
+      .#{$styles}__card {
+        background-image: url("../img/grid-img-6.jpg");
+      }
+    }
+  }
+}

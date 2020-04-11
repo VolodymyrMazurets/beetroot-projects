@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100vh;
+  font-size: 100%;
+}
+body {
+  color: $grey;
+  font-size: $common-size;
+  font-family: $main-font;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.about-us {
+    @include flex-row(center, center);
+    padding: 146px 0 159px;
+}
+.services {
+    @include flex-row(center, center);
+    padding: 127px 0 109px;
+    background: url('../img/services-bg.jpg') no-repeat center;
+}

@@ -1,0 +1,66 @@
+.first-screen {
+  min-height: 100vh;
+  background: url("../img/header-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  @include flex-col(center, center);
+  color: $white;
+  position: relative;
+  &__logo {
+    margin-bottom: 75px;
+  }
+  &__title {
+    @include text($main-title, 700);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 53px;
+    span {
+      display: block;
+    }
+  }
+  &__text {
+    @include text($medium-size);
+    max-width: 41%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.8;
+  }
+  &__btn {
+    position: absolute;
+    bottom: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+      svg {
+        animation-name: svg-reset;
+      }
+    }
+    svg {
+      fill: $white;
+      animation-name: svg-fill;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      transition: fill 0.2s ease;
+    }
+  }
+}
+
+@keyframes svg-fill {
+  0% {
+    fill: $white;
+  }
+  50% {
+    fill: $grey;
+  }
+  100% {
+    fill: $white;
+  }
+}
+@keyframes svg-reset {
+  from {
+    fill: $white;
+  }
+  to {
+    fill: $white;
+  }
+}

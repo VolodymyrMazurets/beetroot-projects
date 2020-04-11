@@ -1,0 +1,54 @@
+$styles: card-with-border;
+.#{$styles} {
+    border: 2px solid $grey;
+    border-top: none;
+    padding: 0 0 30px;
+    @include flex-col(flex-start, center);
+    max-width: 900px;
+    position: relative;
+    &--white {
+        color: $white;
+        border-color: $white;
+        .#{$styles}__title {
+            &:before, &:after {
+                background-color: $white;
+            }
+        }
+    }
+    &__title {
+        @include text($card-size, 700); 
+        text-transform: uppercase;
+        position: relative;
+        transform: translateY(-55%);
+        white-space: nowrap;
+        width: 100%;
+        text-align: center;
+        &:before,
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 25%;
+            position: absolute;
+            height: 2px;
+            background-color: #3c3c3c;
+            top: 50%;
+            transform: translateY(50%);
+        }
+        &:after {
+            right: -2px;
+        }
+        &:before {
+            left: -2px;
+        }
+    }
+    &__text {
+        text-align: center;
+        font-weight: 300;
+        margin-bottom: 20px;
+        max-width: 70%;
+        line-height: 1.6;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -4,7 +4,8 @@
   "description": "Front-End assembler",
   "main": "gulpfile.js",
   "scripts": {
-    "help": "gulp info"
+    "help": "gulp info",
+    "dev": "gulp ---flat-style-website"
   },
   "author": "Volodymyr Mazurets",
   "license": "ISC",
