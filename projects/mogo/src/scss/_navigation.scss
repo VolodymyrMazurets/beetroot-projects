@@ -1,0 +1,37 @@
+$styles: navigation;
+.#{$styles} {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include z-index(navigation);
+  @include flex-row(space-between, center);
+  padding: 28px 0;
+  color: $N0;
+  &__logo {
+    @include text($H300, 700);
+    font-family: $montserrat;
+    @include transition(color);
+    &:hover {
+      color: $Y10;
+    }
+  }
+  &__list {
+    @include flex-row(flex-start, center);
+  }
+  &__item:not(:last-child) {
+    margin-right: 55px;
+  }
+  &__link {
+    padding-bottom: 12px;
+    @include text($H40);
+    font-family: $montserrat;
+    border-bottom: 3px solid transparent;
+    @include transition(color, border-color);
+    text-transform: uppercase;
+    &:hover {
+      border-color: $Y10;
+      color: $Y10;
+    }
+  }
+}

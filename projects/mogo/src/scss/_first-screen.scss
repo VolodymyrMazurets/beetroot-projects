@@ -1,0 +1,112 @@
+$styles: first-screen;
+.#{$styles} {
+  min-height: 100vh;
+  background: url("#{$img-path}picture.jpg") center no-repeat;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  color: $N0;
+  .container {
+    z-index: 1;
+    position: relative;
+    flex: 1;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    @include position;
+    background-image: linear-gradient(to top, #fce38a, #f38181),
+      linear-gradient(to bottom, #fce38a, #fce38a);
+    z-index: 0;
+    opacity: 0.7;
+  }
+  &__subtitle {
+    @include text($H720);
+    margin-bottom: 42px;
+    font-family: $kaushan;
+  }
+  &__title {
+    @include text($H1500, 700);
+    line-height: 0.93;
+    font-family: $montserrat;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 124px;
+    position: relative;
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background-color: $N0;
+      bottom: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__btn {
+    min-width: 160px;
+    padding: 0 32px;
+    height: 40px;
+    border: solid 3px $N0;
+    background-color: transparent;
+    @include flex-row(center, center);
+    @include text($H40, 700);
+    font-family: $montserrat;
+    text-transform: uppercase;
+    @include transition(border-color, color);
+    &:hover {
+      border-color: $Y10;
+      color: $Y10;
+    }
+  }
+  &__list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include flex-row(stretch, stretch);
+  }
+  &__item {
+    flex: 1 1 25%;
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    padding: 25px 0 28px;
+    @include text($H80);
+    font-family: $montserrat;
+    opacity: 0.7;
+    border-top: 3px solid rgba($N0, 0.5);
+    width: 100%;
+    position: relative;
+    @include transition(opacity, border-color);
+    &:before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 70px;
+      height: 3px;
+      background-color: transparent;
+      top: -3px;
+      left: 0;
+      @include transition(background-color);
+    }
+    span {
+      font-size: $H240;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+    &:hover {
+      opacity: 1;
+      border-color: $N0;
+      &:before {
+        background-color: $R10;
+      }
+    }
+  }
+}
