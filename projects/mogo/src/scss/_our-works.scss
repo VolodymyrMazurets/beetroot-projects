@@ -1,0 +1,27 @@
+$styles: our-works;
+.#{$styles} {
+  background-color: $B10;
+  color: $N0;
+  &__list {
+    @include flex-row(stretch, stretch);
+  }
+  &__item {
+    flex: 1 1 20%;
+    padding: 90px 8px;
+    @include flex-col(center, center);
+    border-left: 1px solid rgba($N0, 0.3);
+    &:last-child {
+      border-right: 1px solid rgba($N0, 0.3);
+    }
+  }
+  &__number {
+    @include text($H720, 700);
+    font-family: $montserrat;
+    margin-bottom: 30px;
+    line-height: 1;
+  }
+  &__text {
+    @include text($H40);
+    font-family: $montserrat;
+  }
+}

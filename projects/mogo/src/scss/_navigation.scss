@@ -5,9 +5,16 @@ $styles: navigation;
   left: 0;
   right: 0;
   @include z-index(navigation);
-  @include flex-row(space-between, center);
   padding: 28px 0;
   color: $N0;
+  @include transition(padding, background-color);
+  &.filled {
+    background-color: rgba($R10, .7);
+    padding: 14px 0;
+  }
+  .container {
+    @include flex-row(space-between, center);
+  }
   &__logo {
     @include text($H300, 700);
     font-family: $montserrat;
@@ -23,15 +30,41 @@ $styles: navigation;
     margin-right: 55px;
   }
   &__link {
-    padding-bottom: 12px;
     @include text($H40);
     font-family: $montserrat;
-    border-bottom: 3px solid transparent;
     @include transition(color, border-color);
     text-transform: uppercase;
+    position: relative;
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: transparent;
+      @include transition(background-color);
+    }
     &:hover {
-      border-color: $Y10;
       color: $Y10;
+      &:after {
+        background-color: $Y10;
+      }
+    }
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    svg {
+      fill: $N0;
+      @include transition(fill);
+    }
+    &:hover {
+      svg {
+        fill: $Y10;
+      }
     }
   }
 }

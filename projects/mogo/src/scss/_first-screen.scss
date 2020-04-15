@@ -1,7 +1,7 @@
 $styles: first-screen;
 .#{$styles} {
   min-height: 100vh;
-  background: url("#{$img-path}picture.jpg") center no-repeat;
+  background: url("#{$img-path}header/intro-bg.png") center no-repeat;
   position: relative;
   z-index: 0;
   display: flex;
@@ -33,19 +33,8 @@ $styles: first-screen;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 124px;
-    position: relative;
-    &:after {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      width: 60px;
-      height: 3px;
-      background-color: $N0;
-      bottom: -70px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
+    @include mogo-title-line($N0, -70px);
+  } 
   &__btn {
     min-width: 160px;
     padding: 0 32px;

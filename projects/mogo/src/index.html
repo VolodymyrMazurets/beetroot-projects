@@ -11,41 +11,55 @@
 </head>
 
 <body>
-	<header class="navigation container">
-		<a href="/" class="navigation__logo">MoGo</a>
-		<nav class="navigation__nav">
-			<ul class="navigation__list">
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">about</a>
-				</li>
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">service</a>
-				</li>
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">work</a>
-				</li>
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">blog</a>
-				</li>
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">contact</a>
-				</li>
-				<li class="navigation__item">
-					<button class="navigation__btn">
-						<img src="./img/SHOPPING-CART.png" alt="cart">
-					</button>
-				</li>
-				<li class="navigation__item">
-					<button class="navigation__btn">
-						<img src="./img/MAGNIFYING-GLASS.png" alt="search">
-					</button>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<!-- First screen -->
 
+	<!-- Header -->
+	<header id="navBar" class="navigation">
+		<div class="container">
+			<a href="/" class="navigation__logo">MoGo</a>
+			<nav class="navigation__nav">
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a href="#about" class="navigation__link">about</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">service</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">work</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">blog</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">contact</a>
+					</li>
+					<li class="navigation__item">
+						<button class="navigation__btn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="17.62" height="14.031" viewBox="0 0 17.62 14.031">
+								<path id="SHOPPING-CART-icon.svg"
+									d="M1501.73,40.663h0l-2.48,5.5h0a0.815,0.815,0,0,1-.7.485h0l-7.12.475,0.41,1.177h7.76a1.65,1.65,0,1,1-1.65,1.651h-7.7a1.65,1.65,0,1,1-1.65-1.651h1.49l-3.18-9.075h-1.89a0.825,0.825,0,0,1,0-1.65h2.48a0.835,0.835,0,0,1,.78.554h0l0.48,1.373h12.21a0.826,0.826,0,0,1,.83.825A0.941,0.941,0,0,1,1501.73,40.663Zm-12.39.487,1.52,4.357,7.09-.473,1.75-3.884h-10.36Z"
+									transform="translate(-1484.19 -37.563)" />
+							</svg>
+						</button>
+					</li>
+					<li class="navigation__item">
+						<button class="navigation__btn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="17.62" height="17.625" viewBox="0 0 17.62 17.625">
+								<path id="MAGNIFYING-GLASS-icon.svg"
+									d="M1561.32,50.983a1.652,1.652,0,0,1-2.34,2.334h0l-4.83-4.836a6.627,6.627,0,1,1,2.33-2.334l4.84,4.836h0ZM1550.8,37.85a4.95,4.95,0,1,0,4.95,4.95A4.952,4.952,0,0,0,1550.8,37.85Z"
+									transform="translate(-1544.19 -36.188)" />
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- End header -->
+
+	<main>
+
+		<!-- First screen -->
 		<section class="first-screen">
 			<div class="container d-flex flex-column justify-content-center align-items-center">
 				<h2 class="first-screen__subtitle">Creative Template</h2>
@@ -76,8 +90,76 @@
 				</ul>
 			</div>
 		</section>
-
 		<!-- First screen End -->
+
+		<!-- What-we-do -->
+		<section class="about-us" id="about">
+			<div class="container">
+				<h4 class="about-us__subtitle">What we do</h4>
+				<h2 class="about-us__title">Story about us</h2>
+				<p class="about-us__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="row">
+					<div class="mb-3 mb-md-0 col-12 col-md-4 about-us__item">
+						<a href="#" class="about-us__link">
+							<span class="about-us__hover-block">
+								<img class="about-us__hover-img" src="./img/about-us/about-USERS-icon.svg" alt="">
+								<span class="about-us__hover-text">super team</span>
+							</span>
+							<img class="about-us__img" src="./img/about-us/about-us-1.jpg" alt="about-us">
+						</a>
+					</div>
+					<div class="mb-3 mb-md-0 col-12 col-md-4 about-us__item">
+						<a href="#" class="about-us__link">
+							<span class="about-us__hover-block">
+								<img class="about-us__hover-img" src="./img/about-us/about-USERS-icon.svg" alt="">
+								<span class="about-us__hover-text">super team</span>
+							</span>
+							<img class="about-us__img" src="./img/about-us/about-us-2.jpg" alt="about-us">
+						</a>
+					</div>
+					<div class="col-12 col-md-4 about-us__item">
+						<a href="#" class="about-us__link">
+							<span class="about-us__hover-block">
+								<img class="about-us__hover-img" src="./img/about-us/about-USERS-icon.svg" alt="">
+								<span class="about-us__hover-text">super team</span>
+							</span>
+							<img class="about-us__img" src="./img/about-us/about-us-3.jpg" alt="about-us">
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End what-we-do -->
+
+		<!-- Our-works -->
+		<section class="our-works">
+			<div class="container">
+				<ul class="our-works__list">
+					<li class="our-works__item">
+						<h4 class="our-works__number">42</h4>
+						<p class="our-works__text">Web Design Projects</p>
+					</li>
+					<li class="our-works__item">
+						<h4 class="our-works__number">123</h4>
+						<p class="our-works__text">happy client</p>
+					</li>
+					<li class="our-works__item">
+						<h4 class="our-works__number">15</h4>
+						<p class="our-works__text">award winner</p>
+					</li>
+					<li class="our-works__item">
+						<h4 class="our-works__number">99</h4>
+						<p class="our-works__text">cup of coffee</p>
+					</li>
+					<li class="our-works__item">
+						<h4 class="our-works__number">24</h4>
+						<p class="our-works__text">members</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- End our-works -->
+
 	</main>
 	<script src="js/bundle.js"></script>
 </body>
