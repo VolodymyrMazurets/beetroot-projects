@@ -1,18 +1,25 @@
-$styles: about-us;
+$styles: same-works;
 .#{$styles} {
-  padding: 91px 0 110px;
-  text-align: center;
-  
-  &__link {
+  padding-top: 110px;
+  &__gallery {
+    @include flex-row(stretch, stretch);
+    flex-wrap: nowrap;
+  }
+  &__block {
+    @include flex-row(stretch, stretch);
+    flex-wrap: wrap;
+    flex: 1 1 50%;
+  }
+  &__col {
+    @include flex-col(stretch, stretch);
+    flex: 1 1 50%;
+  }
+  &__img-wrapper {
+    flex: 1 1 50%;
     position: relative;
-    width: 100%;
-    padding-top: 65.7%;
-    background-color: $B10;
-    @include transition(transform, box-shadow);
-    @media screen and (min-width: 415px) {
+    padding-top: 40.6%;
+    @media screen and (min-width: 769px) {
       &:hover {
-        box-shadow: 10px 10px 0 0 ($B10);
-        transform: translateX(-10px) translateY(-10px);
         .#{$styles}__hover-block {
           opacity: 1;
         }
@@ -44,16 +51,25 @@ $styles: about-us;
       z-index: 0;
     }
   }
-  &__hover-img {
-    width: 32px;
-    height: 24px;
-    z-index: 1;
+  .#{$styles} &__hover-img {
+    @include size(30px);
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__hover-title {
+    font-family: $montserrat;
+    font-size: $H40;
+    position: relative;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+    color: $N0;
   }
   &__hover-text {
-    font-family: $montserrat;
-    @include text($H80, 700, $N0);
-    margin-top: 11px;
-    z-index: 1;
-    text-transform: uppercase;
+    position: relative;
+    font-style: italic;
+    color: $N0;
+    font-size: $H50;
+    font-weight: 300;
   }
 }

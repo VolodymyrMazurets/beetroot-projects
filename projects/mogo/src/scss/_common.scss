@@ -40,3 +40,26 @@ a {
 ul {
   list-style: none;
 }
+
+.mogo-subtitle {
+  font-family: $kaushan;
+  @include text($H240, 400, $N90);
+  margin-bottom: 23px;
+  position: relative;
+  text-align: center;
+}
+.mogo-title {
+  text-align: center;
+  font-family: $montserrat;
+  margin-bottom: 90px;
+  text-transform: uppercase;
+  @include text($H300, 700, $N90);
+  @include mogo-title-line;
+}
+.mogo-text {
+  @include text($H50, 400);
+  max-width: 80%;
+  margin: 0 auto 91px;
+  line-height: 1.6;
+  text-align: center;
+}
