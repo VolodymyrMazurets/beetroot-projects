@@ -22,6 +22,8 @@
   ::-webkit-scrollbar-thumb:hover {
     background: darken(#95e1d3, 20%);
   }
+  scrollbar-width: thin;
+  scrollbar-color: $N30 $B10;
 }
 html,
 body {

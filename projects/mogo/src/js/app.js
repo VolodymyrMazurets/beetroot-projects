@@ -9,5 +9,9 @@ document.addEventListener("scroll", () =>
 );
 
 burger.addEventListener("click", () => {
-  mobileMenu.classList.toggle('active');
+  mobileMenu.classList.toggle("active");
 });
+
+function showAlert() {
+  alert("Form have been submited");
+};
