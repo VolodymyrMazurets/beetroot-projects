@@ -1,0 +1,45 @@
+$styles: what-we-do;
+.#{$styles} {
+  padding: 112px 0 0;
+  &__accordion-item {
+    &:nth-child(n + 2) {
+      margin-top: 10px;
+    }
+  }
+  &__accordion-toggler {
+    @include flex-row(flex-start, center);
+    padding: 15px 16px;
+    position: relative;
+    border: 1px solid $N40;
+    img {
+      margin-right: 15px;
+    }
+    &:before {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      background-image: url(../img/what-we-do/ARROW-DOWN.svg);
+      transform: translateY(-50%) rotate(180deg);
+      @include transition;
+    }
+  }
+  .uk-open > .uk-accordion-title::before {
+    background-image: url(../img/what-we-do/ARROW-DOWN.svg);
+    transform: rotate(0deg) translateY(-50%);
+  }
+  &__accordion-content {
+    border: 1px solid $N40;
+    border-top-color: transparent;
+    margin-top: 0;
+    padding: 21px 20px 28px;
+
+    p {
+      @include text($H50, 300);
+      font-style: italic;
+      line-height: 1.6;
+      max-height: 132px;
+      overflow: auto;
+      padding-right: 25px;
+    }
+  }
+}

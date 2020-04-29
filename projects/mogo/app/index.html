@@ -6,7 +6,7 @@
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
 	<title>Mogo</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
-	<link rel="stylesheet" href="./assets/libs/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,7 +27,7 @@
 			<div id="mobileNav" class="navigation__mobile-nav fadeInRight">
 				<ul class="navigation__list">
 					<li class="navigation__item">
-						<a href="#about" class="navigation__link">about</a>
+						<a href="#" class="navigation__link" id="test">about</a>
 					</li>
 					<li class="navigation__item">
 						<a href="#" class="navigation__link">service</a>
@@ -351,6 +351,54 @@
 		</section>
 		<!-- End Uniaue Design -->
 
+		<!-- What we do -->
+		<section class="what-we-do">
+			<div class="container">
+				<h4 class="mogo-subtitle">Service</h4>
+				<h2 class="mogo-title">what we do</h2>
+				<p class="mogo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. </p>
+				<div class="row">
+					<div class="col-6">
+						<img src="./img/what-we-do/wwd-img.jpg" alt="">
+					</div>
+					<div class="col-6">
+						<ul uk-accordion>
+							<li class="uk-open what-we-do__accordion-item">
+								<a class="uk-accordion-title what-we-do__accordion-toggler" href="#">
+									<img src="./img/what-we-do/BULLSEYE-icon.svg" alt="">
+									Photography
+								</a>
+								<div class="uk-accordion-content what-we-do__accordion-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</li>
+							<li class="what-we-do__accordion-item">
+								<a class="uk-accordion-title what-we-do__accordion-toggler" href="#">
+									<img src="./img/what-we-do/BULLSEYE-icon.svg" alt="">
+									Photography
+								</a>
+								<div class="uk-accordion-content what-we-do__accordion-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</li>
+							<li class="what-we-do__accordion-item">
+								<a class="uk-accordion-title what-we-do__accordion-toggler" href="#">
+									<img src="./img/what-we-do/BULLSEYE-icon.svg" alt="">
+									Photography
+								</a>
+								<div class="uk-accordion-content what-we-do__accordion-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End What we do -->
+
 		<!-- Same Works -->
 		<section class="same-works">
 			<h4 class="mogo-subtitle">What we do</h4>
@@ -424,6 +472,7 @@
 			</div>
 		</section>
 		<!-- End Same Works -->
+
 		<!-- Footer  -->
 		<footer class="footer">
 			<div class="container footer__container">
@@ -573,8 +622,11 @@
 		</footer>
 		<!-- End Footer  -->
 
+		<a href="#" uk-totop uk-scroll class="to-top" id="to-top"></a>
+
 	</main>
 	<script src="https://kit.fontawesome.com/222beed113.js" crossorigin="anonymous"></script>
+	<script src="assets/libs/uikit.js"></script>
 	<script src="js/bundle.js"></script>
 </body>
 

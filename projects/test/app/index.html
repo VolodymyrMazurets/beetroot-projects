@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
 	<title>Title</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	
-	<nav class="navigation">
-		<ul class="navigation__list">
-			<li class="navigation__list-item">
-				<a href="#" class="navigation__link">home</a>
-			</li>
-			<li class="navigation__list-item">
-				<a href="#" class="navigation__link">home</a>
-			</li>
-			<li class="navigation__list-item">
-				<a href="#" class="navigation__link">home</a>
-			</li>
-		</ul>
-	</nav>
+	<section>
+		<!-- This is a button toggling the modal -->
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-example">
+	<span uk-icon="play"></span>
+</button>
+
+<!-- This is an anchor toggling the modal -->
+<a href="#modal-example" uk-toggle>Open</a>
+
+<!-- This is the modal -->
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Icons</h2>
+				<span uk-icon="heart"></span>
+				<span uk-icon="git-branch"></span>
+				<span uk-icon="minus-circle"></span>
+				<span uk-icon="heart"></span>
+    </div>
+</div>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
 	<script src="js/bundle.js"></script>
 </body>
+
 </html>

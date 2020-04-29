@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   /* width */
   ::-webkit-scrollbar {
     width: 5px;
@@ -38,6 +37,10 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 ul {
   list-style: none;
@@ -64,4 +67,22 @@ ul {
   margin: 0 auto 91px;
   line-height: 1.6;
   text-align: center;
+}
+.to-top {
+  opacity: 0;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  @include size(40px, true);
+  @include flex-row(center, center);
+  @include transition(background-color, color, opacity);
+  background-color: $R10;
+  color: $Y10;
+  &:hover {
+    background-color: darken($color: $R10, $amount: 10%);
+    color: darken($Y10, 30%);
+  }
+  &.filled {
+    opacity: 1;
+  }
 }
