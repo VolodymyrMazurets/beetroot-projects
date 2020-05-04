@@ -122,7 +122,7 @@ $screen-retina: 1701px;
   }
 }
 
-@mixin mogo-title-line($bg-color: $R10, $bottom: -40px) {
+@mixin mogo-title-line($bg-color: $R10, $bottom: -40px, $center: true) {
   position: relative;
     &:after {
       content: "";
@@ -132,7 +132,10 @@ $screen-retina: 1701px;
       height: 3px;
       background-color: $bg-color;
       bottom: $bottom;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      @if $center {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 }
