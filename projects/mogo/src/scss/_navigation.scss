@@ -32,21 +32,27 @@ $styles: navigation;
   &__list {
     @include flex-col(center, flex-start);
     height: 100%;
+    margin: 0;
+    padding: 0;
     @media screen and (min-width: 769px) {
       @include flex-row(flex-start, center);
     }
   }
   &__item:not(:last-child) {
-    margin-bottom: 32px;
     @media screen and (min-width: 769px) {
-      margin-right: 55px;
+      margin-right: 30px;
       margin-bottom: 0;
+      @media screen and (min-width: 992px) {
+        margin-right: 55px;
+      }
+    }
+    &--mobile {
+      margin-bottom: 32px;
     }
   }
   &__link {
     @include text($H90);
     font-family: $montserrat;
-    @include transition(color, border-color);
     text-transform: uppercase;
     position: relative;
     @media screen and (min-width: 415px) {
@@ -62,6 +68,9 @@ $styles: navigation;
         background-color: transparent;
         @include transition(background-color);
       }
+    }
+    @media screen and (min-width: 992px) {
+    @include transition(color, border-color);
       &:hover {
         color: $Y10;
         &:after {
@@ -78,9 +87,11 @@ $styles: navigation;
       fill: $N0;
       @include transition(fill);
     }
-    &:hover {
-      svg {
-        fill: $Y10;
+    @media screen and (min-width: 992px) {
+      &:hover {
+        svg {
+          fill: $Y10;
+        }
       }
     }
   }
@@ -94,7 +105,7 @@ $styles: navigation;
     }
     @media screen and (min-width: 769px) {
       display: none;
-    } 
+    }
   }
   &__mobile-nav {
     display: none;
