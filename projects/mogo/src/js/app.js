@@ -89,6 +89,10 @@ burger.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
 });
 
-function showAlert() {
-  alert("Form have been submited");
-}
+
+const first = 1;
+const second = 2;
+
+const func = (a, b) => a + b;
+
+func(first, second);

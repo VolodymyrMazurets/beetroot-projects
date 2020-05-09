@@ -7,8 +7,12 @@ $styles: slider;
     padding: 100px 0;
   }
   &__card {
-    @include flex-row(flex-start, center);
-    padding: 0 110px;
+    @include flex-col(flex-start, center);
+    padding: 0;
+    @media screen and (min-width: 768px) {
+      @include flex-row(flex-start, center);
+      padding: 0 110px;
+    }
   }
   &__icon-wrapper {
     display: none;
@@ -64,7 +68,11 @@ $styles: slider;
     }
   }
   a[href="#"].#{$styles}__btn {
-    color: $N60;
-    margin: 12px;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      color: $N60;
+      margin: 12px;
+    }
   }
 }

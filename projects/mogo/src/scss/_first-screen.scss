@@ -30,7 +30,7 @@ $styles: first-screen;
     @media screen and (min-width: 415px) {
       font-size: $H360;
     }
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 992px) {
       font-size: $H720;
     }
   }
@@ -46,7 +46,7 @@ $styles: first-screen;
     @media screen and (min-width: 415px) {
       font-size: $H550;
     }
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 992px) {
       font-size: $H1500;
     }
   }
