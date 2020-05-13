@@ -1,0 +1,79 @@
+.section {
+  padding: 100px 0;
+  &__form {
+    flex: 1 1 100%;
+    max-width: 600px;
+    border: 1px solid #97a0af;
+    border-radius: 8px;
+    padding: 24px;
+  }
+  &__title {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  &__form-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  &__label {
+    display: flex;
+    margin-bottom: 16px;
+  }
+  &__input {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: inherit;
+    padding: 0 36px 0 12px;
+    border: 1px solid #403294;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: transparent;
+    &::placeholder {
+      font-size: 12px;
+      color: #8777d9;
+    }
+  }
+  &__input-icon {
+    color: #403294;
+  }
+  &__button {
+    height: 48px;
+    padding: 0 24px;
+    background-color: #c0b6f2;
+    border: 1px solid #403294;
+    border-radius: 0 4px 4px 0;
+    outline: none;
+    border-left: none;
+    cursor: pointer;
+  }
+  &__toggle {
+    display: inline-block;
+    background-color: #c0b6f2;
+    width: 60px;
+    height: 24px;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+  }
+  &__checkbox {
+    display: none;
+    &:checked + .section__toggle-inner {
+      transform: translateX(36px);
+    }
+  }
+  &__toggle-inner {
+    $size: 18px;
+    position: absolute;
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: #403294;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease;
+  }
+}
