@@ -1,0 +1,42 @@
+$styles: testimonials;
+.#{$styles} {
+  padding: 120px 0 200px;
+  background: url(../img/testimonials-bg.jpeg) center no-repeat;
+  background-size: cover;
+  &__title {
+    font-family: $aleo;
+    @include text($H360);
+    margin-bottom: 94px;
+    text-align: center;
+  }
+  &__card {
+    @include flex-row(stretch, stretch);
+  }
+  &__img-wrapper {
+    width: 100%;
+    flex-basis: 45%;
+    img {
+      height: 100%;
+    }
+  }
+  &__info {
+    flex-basis: 60%;
+    padding: 50px 54px 48px 60px;
+    background-color: $dark-grey;
+  }
+  &__subtitle {
+    @include text($H200, 400, $testimonials-color);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  &__text {
+    @include text($H60, 400, $light-grey);
+    line-height: 1.63;
+    i {
+      color: $main-color;
+      position: relative;
+      bottom: 10px;
+      margin-right: 6px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+$styles: icons;
+.#{$styles} {
+  padding: 100px 0 120px;
+  .container {
+    @include flex-row(space-between, center);
+    position: relative;
+  }
+  &__col {
+    @include flex-col(flex-start, center);
+    position: relative;
+    z-index: 1;
+    background-color: $dark-grey;
+    &--second {
+      background-color: transparent;
+    }
+  }
+  &__wrapper {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: $dark-grey;
+    img {
+      @include size(60px);
+    }
+  }
+  &__title {
+    font-family: $aleo;
+    @include text($H360, 400, $light-grey);
+  }
+  &__line {
+    width: 90%;
+    position: absolute;
+    left: 45px;
+    top: -50px;
+    z-index: 0;
+    object-fit: contain;
+  }
+}

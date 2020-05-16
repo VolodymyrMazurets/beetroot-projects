@@ -1,0 +1,37 @@
+$styles: flex-section;
+.#{$styles} {
+  padding: 230px 0 100px;
+  background: url(../img/third-bg.jpeg) no-repeat center;
+  background-size: cover;
+  &--second {
+    background: url(../img/fourth-bg.jpeg) no-repeat center;
+    background-size: cover;
+  }
+  .container {
+    @include flex-row;
+    &.flex-end {
+      justify-content: flex-end;
+    }
+  }
+  &__col {
+    @include flex-col;
+    padding: 50px 30px;
+    background-color: $card-bg;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  &__subtitle {
+    @include text($H200, 400, $light-grey);
+    margin-bottom: 30px;
+  }
+  &__title {
+    @include text($H200, 400);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  &__text {
+    @include text($H60, 400, $light-grey);
+    line-height: 1.63;
+    margin-bottom: 48px;
+  }
+}

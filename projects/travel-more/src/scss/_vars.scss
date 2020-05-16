@@ -4,11 +4,15 @@ $josefin: 'Josefin Sans', sans-serif;
 $aleo: 'Aleo', serif;
 
 $main-color: #5474fd;
+$hover-btn: #496bfe;
 $white: #fff;
 $black: #000;
 $dark-grey: #333333;
 $light-grey: #e8e8e8;
 $placeholder-color: #999999;
+$card-bg: rgba(#232323, 0.9);
+$testimonials-color: #fefefe;
+$footer-bg: #232323;
 
 @function px_to_rem($target, $context: $base-size) {
   @if $target==0 {

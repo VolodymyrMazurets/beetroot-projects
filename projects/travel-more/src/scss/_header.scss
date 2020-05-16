@@ -1,0 +1,113 @@
+$styles: header;
+.#{$styles} {
+  min-height: 100vh;
+  background: url(../img/main-bg.jpeg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  padding: 80px 0 120px;
+  @include flex-row(stretch, stretch);
+  .container {
+    @include flex-col(center, center);
+    flex: 1;
+  }
+  &__title {
+    @include text($H480, 700);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    @include text($H220, 400);
+    margin-bottom: 50px;
+  }
+  &__form {
+    @include flex-row(stretch, stretch);
+    margin-bottom: 120px;
+  }
+  &__input {
+    height: 60px;
+    min-width: 500px;
+    background-color: $white;
+    border: none;
+    padding: 0 32px;
+    outline-color: $black;
+    @include placeholder {
+      @include text($H40, 400, $placeholder-color);
+      text-align: center;
+      font-family: $josefin;
+    }
+  }
+  &__btn {
+    padding: 0 17px 0 36px;
+    background-color: $main-color;
+    @include flex-row(center, center);
+    text-transform: uppercase;
+    @include text($H40, 400);
+    font-family: $aleo;
+    border: 2px solid $white;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($main-color, 5%);
+    }
+    &:active {
+      background-color: darken($main-color, 5%);
+    }
+    svg {
+      margin-left: 15px;
+      fill: $white;
+    }
+  }
+  &__anchor {
+    @include text($H40, 400);
+    position: relative;
+    @include transition(color);
+    &:after {
+      content: '';
+      @include size(9px);
+      display: inline-block;
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      border: 1px solid $white;
+      border-left: none;
+      border-top: none;
+      @include transition(border-color);
+    }
+    &:hover {
+      color: darken($white, 20%);
+      &:after {
+        border-color: darken($white, 20%);
+      }
+    }
+  }
+  &__nav {
+    padding: 28px 0;
+    background-color: $main-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .container {
+      @include flex-row(space-between, center);
+    }
+  }
+  &__logo {
+    text-transform: uppercase;
+    @include text($H240, 700);
+  }
+  &__list {
+    @include flex-row(flex-start, center);
+  }
+  &__item:not(:last-child) {
+    margin-right: 42px;
+  }
+  &__link {
+    font-family: $aleo;
+    @include text($H40, 400);
+    text-transform: uppercase;
+    @include transition(color);
+    &:hover {
+      color: darken($white, 20%);
+    }
+  }
+}

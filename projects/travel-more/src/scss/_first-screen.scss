@@ -1,0 +1,37 @@
+$styles: first-screen;
+.#{$styles} {
+  padding: 120px 0;
+  background: url(../img/second-bg.jpeg) no-repeat center;
+  background-size: cover;
+  .container {
+    @include flex-row(stretch, stretch);
+  }
+  &__col {
+    @include flex-col(center);
+    flex: 1 1 50%;
+    padding-right: 50px;
+    &:last-child {
+      padding-right: 0;
+      padding-left: 50px;
+    }
+  }
+  &__title {
+    font-family: $aleo;
+    @include text($H360);
+    margin-bottom: 60px;
+  }
+  &__text {
+    @include text($H60, 400, $light-grey);
+    margin-bottom: 48px;
+    line-height: 1.63;
+    letter-spacing: 1.6px;
+  }
+  &__img {
+    max-width: 350px;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+      align-self: flex-end;
+    }
+  }
+}

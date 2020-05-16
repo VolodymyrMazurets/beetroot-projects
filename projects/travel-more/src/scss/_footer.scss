@@ -1,0 +1,28 @@
+$styles: footer;
+.#{$styles} {
+  padding: 120px 0 50px;
+  background-color: $footer-bg;
+  @include flex-col(flex-start, center);
+  &__logo {
+    text-transform: uppercase;
+    @include text($H240, 700);
+    margin-bottom: 14px;
+  }
+  &__subtitle {
+    @include text($H60);
+    margin-bottom: 30px;
+  }
+  &__list {
+    @include flex-row;
+  }
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+  &__link {
+    color: $white;
+    @include transition(color);
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
